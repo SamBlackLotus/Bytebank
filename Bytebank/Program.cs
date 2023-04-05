@@ -99,7 +99,7 @@ pedro.Nome = "Pedro Souza";
 Console.WriteLine(pedro.Nome);
 Console.WriteLine(pedro.GetBonificacao());
 
-Diretor roberta = new Diretor("02598752175",5000);
+Diretor roberta = new Diretor("02598752175");
 roberta.Nome = "Roberta Silva";
 
 Console.WriteLine(roberta.Nome);

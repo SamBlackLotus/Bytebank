@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bytebank.BytebankADM.Funcionarios
+﻿namespace Bytebank.BytebankADM.Funcionarios
 {
     public class Funcionario
     {
@@ -13,7 +7,7 @@ namespace Bytebank.BytebankADM.Funcionarios
         public double Salario { get; protected set; }
 
         public static int TotalDeFuncionarios { get; private set; }
-        public virtual double GetBonificacao() 
+        public virtual double GetBonificacao()
         {
             return this.Salario * 0.10;
         }
