@@ -3,6 +3,7 @@
 //using Bytebank.Contas;
 using Bytebank.BytebankADM.Funcionarios;
 using Bytebank.BytebankADM.Utilitario;
+using Bytebank.SistemaInterno;
 
 #region
 //ContaCorrente contaDoAndre = new ContaCorrente();
@@ -123,27 +124,44 @@ using Bytebank.BytebankADM.Utilitario;
 #endregion
 
 
-CalcularBonificacao();
-void CalcularBonificacao()
+//CalcularBonificacao();
+//void CalcularBonificacao()
+//{
+//    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+//    Designer ulisses = new Designer("12345678998");
+//    ulisses.Nome = "Ulisses Guimarães";
+
+//    Diretor paula = new Diretor("45678941236");
+//    paula.Nome = "Paula Marques";
+
+//    Auxiliar igor = new Auxiliar("12345678998");
+//    igor.Nome = "Igor Dias";
+
+//    GerenteDeConta camila = new GerenteDeConta("123456789945");
+//    camila.Nome = "Camila Oliveira";
+
+//    gerenciador.Registrar(ulisses);
+//    gerenciador.Registrar(paula);
+//    gerenciador.Registrar(igor);
+//    gerenciador.Registrar(camila);
+
+//    Console.WriteLine("Total de bonificações: "+gerenciador.TotalDeBonificacao);
+//}
+
+UsarSistema();
+void UsarSistema()
 {
-    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+    SistemaInterno sistema = new SistemaInterno();
 
-    Designer ulisses = new Designer("12345678998");
-    ulisses.Nome = "Ulisses Guimarães";
+    Diretor ingrid = new Diretor("21354687496");
+    ingrid.Nome = "Ingrid Novaes";
+    ingrid.Senha = "123456";
 
-    Diretor paula = new Diretor("45678941236");
-    paula.Nome = "Paula Marques";
+    GerenteDeConta ursula = new GerenteDeConta("12345678998");
+    ursula.Nome = "Ursula Alcantara";
+    ursula.Senha = "456789";
 
-    Auxiliar igor = new Auxiliar("12345678998");
-    igor.Nome = "Igor Dias";
-
-    GerenteDeConta camila = new GerenteDeConta("123456789945");
-    camila.Nome = "Camila Oliveira";
-
-    gerenciador.Registrar(ulisses);
-    gerenciador.Registrar(paula);
-    gerenciador.Registrar(igor);
-    gerenciador.Registrar(camila);
-
-    Console.WriteLine("Total de bonificações: "+gerenciador.TotalDeBonificacao);
+    sistema.Logar(ingrid, "123456");
+    sistema.Logar(ursula, "654598");
 }
